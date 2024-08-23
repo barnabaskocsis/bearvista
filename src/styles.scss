@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 // Check tailwind.config.js (tailwind) and and m3-theme.scss (angular material) files for more customization
+@import 'material-symbols/outlined';
 
 @tailwind base;
 @tailwind components;

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component, ContentChild } from '@angular/core';
 import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
-import { NgClass } from '@angular/common';
-import { MatButton, MatButtonModule } from '@angular/material/button';
+import { NgClass, NgIf, NgTemplateOutlet } from '@angular/common';
+import { MatButton } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
+import { CustomSidenavComponent } from '~components/navigation/custom-sidenav/custom-sidenav.component';
 
 @Component({
   selector: 'app-navigation',
@@ -11,15 +13,18 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
     MatSidenav,
     MatSidenavContent,
     NgClass,
-    MatButton
+    MatButton,
+    RouterLink,
+    NgIf,
+    NgTemplateOutlet
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
-export class NavigationComponent {
-  isExpanded = false;
+export class NavigationComponent implements AfterContentInit {
+  @ContentChild(CustomSidenavComponent) customSidenavComponent!: CustomSidenavComponent;
 
-  expand() {
-    this.isExpanded = !this.isExpanded;
+  ngAfterContentInit() {
+    console.log(this.customSidenavComponent);
   }
 }

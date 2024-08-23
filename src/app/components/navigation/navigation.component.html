@@ -1,12 +1,8 @@
 <mat-sidenav-container class="relative h-screen w-full" [hasBackdrop]="false">
   <mat-sidenav [mode]="'push'" class="drop-shadow-lg pointer-events-auto" disableClose="true" opened>
-    <div class="flex flex-col h-screen bg-white transition-[width] overflow-hidden"
-         [ngClass]="isExpanded ? 'w-[16rem]' : 'w-[5.75rem]'">
-      <p>menu item 1</p>
-      <button mat-button color="primary" (click)="expand()">expand</button>
-    </div>
+      <ng-container *ngTemplateOutlet="customSidenavComponent.template" ></ng-container>
   </mat-sidenav >
   <mat-sidenav-content class=" my-sidenav-content">
-    <ng-content></ng-content>
+    <ng-content select="[app-main-content]"></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
