@@ -13,11 +13,6 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
 jobs:
   # Single deploy job since we're just deploying
   deploy:
@@ -43,7 +38,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist folder
-          path: './dist/learning'
+          path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
