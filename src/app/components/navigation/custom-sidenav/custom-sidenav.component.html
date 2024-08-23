@@ -1,0 +1,12 @@
+<ng-template #contentTemplate>
+  <div class="relative flex flex-col h-screen bg-white transition-[width] overflow-hidden expand-sidenav"
+       [ngClass]="isExpanded ? 'w-[16rem]' : 'w-[5.75rem]'">
+    <ng-content/>
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+      <a mat-fab (click)="expand()">
+        <mat-icon class="" fontSet="material-symbols-outlined">expand_content</mat-icon>
+      </a>
+    </div>
+  </div>
+
+</ng-template>
