@@ -1,0 +1,8 @@
+<mat-sidenav-container class="relative h-screen w-full" [hasBackdrop]="false">
+  <mat-sidenav [mode]="'push'" class="drop-shadow-lg pointer-events-auto" disableClose="true" opened>
+      <ng-container *ngTemplateOutlet="customSidenavComponent.template" ></ng-container>
+  </mat-sidenav >
+  <mat-sidenav-content class=" my-sidenav-content">
+    <ng-content select="[app-main-content]"></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
