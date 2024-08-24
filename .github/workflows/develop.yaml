@@ -13,6 +13,12 @@ permissions:
   pages: write
   id-token: write
 
+
+# Allow one concurrent deployment
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
@@ -42,6 +48,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Output Deployment ID
-        run: |
-          echo "Deployment ID: ${{ steps.deployment.outputs.deployment_id }}"
