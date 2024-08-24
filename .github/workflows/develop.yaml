@@ -1,7 +1,7 @@
 name: Deploy content to pages
 
 on:
-  push:
+  pull_request:
     branches: [ develop ]
 
   # Allows you to run this workflow manually from the Actions tab
