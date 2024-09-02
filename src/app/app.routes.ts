@@ -8,8 +8,8 @@ export const routes: Routes = [
     canActivate: [],
   },
   {
-    path: UrlPath.Lobby,
-    loadComponent: () => import('~pages/lobby/lobby.page').then(m => m.LobbyPage),
+    path: UrlPath.Games,
+    loadComponent: () => import('~pages/games/games.page').then(m => m.GamesPage),
     canActivate: [],
   },
   { path: '**', redirectTo: UrlPath.Home },

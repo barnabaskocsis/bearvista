@@ -6,15 +6,30 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
 
-button[mat-flat-button], button[mat-button], button[mat-stroked-button] {
-    height: 3rem;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    letter-spacing: 0.5px;
-    border-radius: 8px;
-    padding-inline: 16px;
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: theme('colors.black-primary');
+}
+
+button[mat-fab], button[extended] {
+  height: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+
+  .mdc-button__label {
+    display: flex;
+    gap: 8px;
+    align-items: center;
   }
+
+}
