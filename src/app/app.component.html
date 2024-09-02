@@ -1,15 +1,33 @@
-<mat-sidenav-container class="h-screen w-screen" [hasBackdrop]="false">
-  <mat-sidenav class="m-2 p-2 !w-auto" mode="side" opened [disableClose]="true">
-    <div class="flex flex-col h-screen overflow-hidden justify-start gap-4">
-      <div class="flex flex-col gap-2">
-        <button mat-raised-button color="primary" routerLink="">Home</button>
+<mat-sidenav-container class="flex h-screen" [hasBackdrop]="false">
+  <mat-sidenav
+    class="flex ml-5 mt-5 mb-5 p-2 !w-16 rounded-2xl bg-white-secondary dark:!bg-black-secondary overflow-hidden transition-all duration-500 ease-in-out hover:!w-36"
+               mode="side" opened>
+      <div class="flex flex-col items-start h-fit gap-2 relative">
+        <div class="relative group">
+          <button mat-fab extended routerLink="" class="relative z-10 flex items-center justify-start">
+            <mat-icon class="material-symbols-outlined">
+              home
+            </mat-icon>
+            <span class="ml-2">Home</span>
+          </button>
+          <div
+            class="absolute top-0 left-0 h-full w-full bg-black-primary rounded-2xl transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+          ></div>
+        </div>
+        <div class="relative group">
+          <button mat-fab extended routerLink="/games">
+            <mat-icon class="material-symbols-outlined">
+              stadia_controller
+            </mat-icon>
+            Games
+          </button>
+          <div
+            class="absolute top-0 left-0 h-full w-full bg-black-primary rounded-2xl transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+          ></div>
+        </div>
       </div>
-      <div class="flex flex-col gap-2">
-        <button mat-raised-button color="primary" routerLink="/lobby">Game</button>
-      </div>
-    </div>
   </mat-sidenav>
-  <mat-sidenav-content class="h-screen dark:bg-black-primary p-4">
+  <mat-sidenav-content class="flex-1 p-5 h-screen bg-white-secondary dark:!bg-black-primary">
     <router-outlet/>
   </mat-sidenav-content>
 </mat-sidenav-container>
