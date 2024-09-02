@@ -1,4 +1,4 @@
 export enum UrlPath {
   Home = '',
-  Lobby = 'lobby'
+  Games = 'games'
 }
