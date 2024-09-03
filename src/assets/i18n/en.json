@@ -1,0 +1,10 @@
+{
+  "home": {
+    "title": "Welcome to Bear Vista!",
+    "sub-title": "Nothing fancy here, yet..."
+  },
+  "navigation": {
+    "home": "Home",
+    "games": "Games"
+  }
+}
