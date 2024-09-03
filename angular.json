@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learning": {
+    "bearvista": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/learningstuff/",
+            "baseHref": "/bearvista/",
             "outputPath": {
               "base": "dist",
               "browser": ""
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "learning:build:production"
+              "buildTarget": "bearvista:build:production"
             },
             "development": {
-              "buildTarget": "learning:build:development"
+              "buildTarget": "bearvista:build:development"
             }
           },
           "defaultConfiguration": "development"
