@@ -11,7 +11,7 @@ import {
   MatSidenavContainer,
   MatSidenavModule
 } from '@angular/material/sidenav';
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -19,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [RouterOutlet, MatSidenavModule, NavigationComponent, CustomSidenavComponent, MatButton, RouterLink, MatIconModule,
     MatDrawerContainer, MatDrawer, MatDrawerContent, MatSidenav, MatSidenavContainer, NgClass, MatIconButton,
-    MatFabButton],
+    MatFabButton, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
