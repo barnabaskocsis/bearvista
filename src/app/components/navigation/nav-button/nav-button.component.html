@@ -1,0 +1,9 @@
+<div class="relative group w-full">
+  <button mat-fab extended routerLink="{{route}}" class="relative z-10 flex items-center justify-start">
+    <img src="{{iconSrc}}" alt="{{label}}" class="w-6 h-6">
+    <span class="ml-3">{{label}}</span>
+  </button>
+  <div
+    class="absolute top-0 left-0 h-full w-full rounded-r-2xl bg-black-primary transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+  ></div>
+</div>

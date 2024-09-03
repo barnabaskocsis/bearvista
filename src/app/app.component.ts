@@ -13,13 +13,15 @@ import {
 } from '@angular/material/sidenav';
 import { NgClass, NgOptimizedImage } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { NavButtonComponent } from '~components/navigation/nav-button/nav-button.component';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, MatSidenavModule, NavigationComponent, CustomSidenavComponent, MatButton, RouterLink, MatIconModule,
     MatDrawerContainer, MatDrawer, MatDrawerContent, MatSidenav, MatSidenavContainer, NgClass, MatIconButton,
-    MatFabButton, NgOptimizedImage],
+    MatFabButton, NgOptimizedImage, NavButtonComponent, TranslocoPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
