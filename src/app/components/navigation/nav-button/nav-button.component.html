@@ -1,9 +1,14 @@
 <div class="relative group w-full">
-  <button mat-fab extended routerLink="{{route}}" class="relative z-10 flex items-center justify-start">
-    <img src="{{iconSrc}}" alt="{{label}}" class="w-6 h-6">
-    <span class="ml-3">{{label}}</span>
+  <button mat-fab extended routerLinkActive [routerLinkActiveOptions]="{exact:true}" #rla="routerLinkActive"
+          routerLink="{{route()}}"
+          class="relative z-10 flex items-center justify-start">
+    <img src="{{iconSrc()}}" alt="{{label()}}" class="w-6 h-6">
+    <span class="ml-3">{{ label() }}</span>
   </button>
   <div
-    class="absolute top-0 left-0 h-full w-full rounded-r-2xl bg-black-primary transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-  ></div>
+    [ngClass]="{'absolute inset-0 w-2 h-full bg-nav-button-gradient': rla.isActive}">
+  </div>
+  <div
+    class="absolute inset-0 w-full h-full rounded-r-2xl bg-nav-button-gradient transition-all duration-300 ease-in-out transform scale-x-0 origin-left group-hover:scale-x-100">
+  </div>
 </div>

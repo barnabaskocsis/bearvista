@@ -1,21 +1,24 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { MatFabButton } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-nav-button',
   standalone: true,
   imports: [
     MatFabButton,
-    RouterLink
+    RouterLink,
+    RouterLinkActive,
+    NgClass
   ],
   templateUrl: './nav-button.component.html',
   styleUrl: './nav-button.component.scss'
 })
 export class NavButtonComponent {
 
-  @Input() route: string = '';
-  @Input() iconSrc: string = '';
-  @Input() label: string = '';
+  route = input.required<string>();
+  iconSrc = input.required<string>();
+  label = input.required<string>();
 
 }
