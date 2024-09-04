@@ -12,5 +12,10 @@ export const routes: Routes = [
     loadComponent: () => import('~pages/games/games.page').then(m => m.GamesPage),
     canActivate: [],
   },
+  {
+    path: UrlPath.Designs,
+    loadComponent: () => import('~pages/designs/designs.page').then(m => m.DesignsPage),
+    canActivate: [],
+  },
   { path: '**', redirectTo: UrlPath.Home },
 ];
