@@ -1,29 +1,17 @@
-<mat-sidenav-container class="flex h-screen dark:!bg-black-primary" [hasBackdrop]="false">
+<mat-sidenav-container class="h-screen dark:!bg-black-primary" [hasBackdrop]="false">
   <mat-sidenav
-    class="flex ml-5 mt-5 mb-5 pt-5 !w-16 rounded-2xl dark:!bg-black-secondary overflow-hidden transition-all duration-500 ease-in-out hover:!w-36"
-               mode="side" opened>
-      <div class="flex flex-col items-start h-fit w-fit gap-2 relative">
-        <div class="relative group w-full">
-          <button mat-fab extended routerLink="" class="relative z-10 flex items-center justify-start">
-            <img src="assets/icons/home.svg" alt="home" class="w-6 h-6">
-            <span class="ml-3">Home</span>
-          </button>
-          <div
-            class="absolute top-0 left-0 h-full w-full rounded-r-2xl bg-black-primary transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-        <div class="relative group w-full">
-          <button mat-fab extended routerLink="/games" class="relative z-10 flex items-start justify-start">
-            <img src="assets/icons/games.svg" alt="games" class="w-6 h-6">
-            <span class="ml-3">Games</span>
-          </button>
-          <div
-            class="absolute top-0 left-0 h-full w-full rounded-r-2xl bg-black-primary transition-all duration-300 ease-in-out opacity-0 group-hover:opacity-100"
-          ></div>
-        </div>
-      </div>
+    class="flex h-1/2 ml-5 mt-auto mb-auto pt-5 !w-16 rounded-2xl dark:!bg-black-secondary overflow-hidden transition-all duration-500 ease-in-out hover:!w-36"
+    mode="side" opened>
+    <div class="flex flex-col items-start h-fit w-fit gap-2 relative">
+      <app-nav-button [route]="''" [label]="'navigation.home' | transloco"
+                      [iconSrc]="'assets/icons/home.svg'"></app-nav-button>
+      <app-nav-button [route]="'/designs'" [label]="'navigation.designs' | transloco"
+                      [iconSrc]="'assets/icons/brush.svg'"></app-nav-button>
+      <app-nav-button [route]="'/games'" [label]="'navigation.games' | transloco"
+                      [iconSrc]="'assets/icons/games.svg'"></app-nav-button>
+    </div>
   </mat-sidenav>
-  <mat-sidenav-content class="flex-1 p-5 h-screen dark:!bg-black-primary">
+  <mat-sidenav-content>
     <router-outlet/>
   </mat-sidenav-content>
 </mat-sidenav-container>
